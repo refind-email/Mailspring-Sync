@@ -1,0 +1,9 @@
+sudp apt install -y cmake
+sudp apt install -y libc-ares-dev
+sudp apt install -y libicu-dev
+sudp apt install -y libctemplate-dev
+sudp apt install -y libtidy-dev
+sudp apt install -y uuid-dev
+sudp apt install -y libxml2-dev
+sudp apt install -y libsasl2-dev
+sudp apt install -y liblzma-dev
