@@ -60,7 +60,7 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # is too old. We need v7.46 or greater.
     echo "Building and installing curl-7.70.0..."
     cd "$DEP_BUILDS_DIR"
-    sudo apt-get build-dep curl
+    #sudo apt-get build-dep curl
     wget -q http://curl.haxx.se/download/curl-7.70.0.tar.bz2
     tar -xjf curl-7.70.0.tar.bz2
     cd curl-7.70.0
@@ -76,8 +76,8 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   ls /opt/openssl/lib
 
   echo "Symbolic linking new libssl libs into /usr/lib to workaround weird libetpan autogen:"
-  sudo ln -s /opt/openssl/lib/libssl.so.1.1 /usr/lib/libssl.so.1.1
-  sudo ln -s /opt/openssl/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
+  sudo ln -sf /opt/openssl/lib/libssl.so.1.1 /usr/lib/libssl.so.1.1
+  sudo ln -sf /opt/openssl/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
 
   echo "Building and installing libetpan..."
   cd "$MAILSYNC_DIR/Vendor/libetpan"
